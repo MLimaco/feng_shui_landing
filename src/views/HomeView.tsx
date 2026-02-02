@@ -6,6 +6,7 @@ import Functions from "../components/Functions";
 import About from "../components/About.tsx";
 import Testimonies from "../components/Testimonies.tsx";
 import Inquiries from "../components/Inquiries.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function HomeView() {
     return (
@@ -20,6 +21,7 @@ export default function HomeView() {
                 <Testimonies />
                 <Inquiries />
             </main>
+            <Footer />
         </div>
     );
 }
