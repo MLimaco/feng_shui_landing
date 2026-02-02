@@ -29,7 +29,7 @@ const Testimonies: React.FC = () => {
             className="relative w-full bg-white py-16 md:py-20 lg:py-24"
             aria-label="Testimonios de clientes"
         >
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full space-y-12 md:space-y-16">
                     {/* Title */}
                     <div className="text-center">

@@ -3,7 +3,7 @@ import React from "react";
 const Inquiries: React.FC = () => {
 
     return (
-            <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#FFEEB3] to-[#D4AF37] py-16 md:py-20 lg:py-24">
+            <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#ffec9c] to-[#edc977] py-16 md:py-20 lg:py-24">
             {/* Background Text */}
             <div className="absolute inset-0 flex flex-col items-center justify-between pointer-events-none">
                 <div className="flex flex-col items-center justify-center pt-8 md:pt-12 lg:pt-16">
@@ -20,7 +20,7 @@ const Inquiries: React.FC = () => {
                 </div>
             </div>
 
-            <div className="relative z-10 mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="relative z-10 mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full text-center space-y-8">
                     {/* Main Title */}
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">

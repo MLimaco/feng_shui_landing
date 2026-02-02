@@ -9,7 +9,8 @@ const About: React.FC = () => {
             }}
             aria-label="Acerca de Giancarlo Chen"
         >
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            
+            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Image */}
                     <div className="relative order-2 lg:order-1">
@@ -42,7 +43,7 @@ const About: React.FC = () => {
                         <div className="text-white space-y-6 lg:space-y-8 p-6 lg:p-0">
                             <div>
                                 <p className="text-[#D4AF37] text-lg md:text-2xl lg:text-3xl mb-2">
-                                    CEO | Mentor
+                                    Fundador | Mentor
                                 </p>
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                                     Giancarlo Chen

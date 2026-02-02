@@ -11,7 +11,7 @@ const Information: React.FC = () => {
             }}
             aria-label="Info Banner Feng Shui"
         >
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-center lg:text-left text-white space-y-6">

@@ -31,7 +31,7 @@ const HeroBanner: React.FC = () => {
             />
 
             <div className="relative z-10 mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24"
-                 style={{ maxWidth: 1200 }}>
+                style={{ maxWidth: 1400 }}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-center lg:text-left order-2 lg:order-1">
@@ -43,6 +43,15 @@ const HeroBanner: React.FC = () => {
                             Impulsa tu negocio y mejora tu <span className="text-[#E6C67A] font-semibold">salud y tus finanzas</span> en menos de <span className="text-[#E6C67A] font-semibold">40 días</span>
                         </p>
 
+                        {/* Image Mobile Only - Before Button */}
+                        <div className={`lg:hidden flex items-center justify-center mt-8 transition-all duration-700 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
+                            <img
+                                src="/images/herobanner/pic.webp"
+                                alt="Consultor Feng Shui"
+                                className="w-full max-w-xs rounded-2xl shadow-2xl"
+                            />
+                        </div>
+
                         <div className="mt-10 flex items-center justify-center lg:justify-start">
                             <button
                                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#F3D78A] to-[#D4AF37] px-6 py-3 text-black font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200 whitespace-nowrap"
@@ -53,8 +62,8 @@ const HeroBanner: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right Image */}
-                    <div className={`flex items-center justify-center order-1 lg:order-2 transition-all duration-700 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
+                    {/* Right Image - Desktop Only */}
+                    <div className={`hidden lg:flex items-center justify-center order-1 lg:order-2 transition-all duration-700 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
                         <img
                             src="/images/herobanner/pic.webp"
                             alt="Consultor Feng Shui"
@@ -65,7 +74,7 @@ const HeroBanner: React.FC = () => {
             </div>
 
             {/* subtle bottom border */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#E6C67A]/60 to-transparent opacity-60" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#e8bf6d]/60 to-transparent opacity-60" />
         </section>
     );
 };

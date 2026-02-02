@@ -4,7 +4,7 @@ import { FaYoutube, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 const Footer: React.FC = () => {
     return (
         <footer className="relative w-full bg-black border-t-4 border-[#D4AF37]">
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full flex flex-col items-center justify-center space-y-8">
                     {/* Logo and Brand */}
                     <div className="flex flex-col items-center justify-center space-y-4">

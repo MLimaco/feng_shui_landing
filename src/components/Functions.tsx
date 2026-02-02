@@ -15,7 +15,7 @@ const Functions: React.FC = () => {
             {/* overlay para mejor legibilidad */}
             <div className="absolute inset-0 bg-white/95" />
 
-            <div className="relative z-10 mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="relative z-10 mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full space-y-12 md:space-y-16">
                     {/* Title */}
                     <div className="text-center">

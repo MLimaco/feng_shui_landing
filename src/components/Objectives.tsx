@@ -4,7 +4,7 @@ import { LightBulbIcon, CurrencyDollarIcon, ArrowTrendingUpIcon, CheckCircleIcon
 const Objectives: React.FC = () => {
     return (
         <section className="relative w-full bg-black py-16 md:py-20 lg:py-24">
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1400 }}>
                 <div className="w-full space-y-16 md:space-y-20">
                     {/* Title */}
                     <div className="text-center">
@@ -22,10 +22,10 @@ const Objectives: React.FC = () => {
                                     <LightBulbIcon className="w-8 h-8 text-black" />
                                 </div>
                             </div>
-                            <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white text-center mb-4">
+                            <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white text-left mb-4">
                                 Claridad en las decisiones
                             </h3>
-                            <p className="text-lg md:text-2xl lg:text-3xl text-slate-300 text-center">
+                            <p className="text-lg md:text-2xl lg:text-3xl text-slate-300 text-left">
                                 Tu entorno favorece enfoque, perspectiva y decisiones estratégicas más claras.
                             </p>
                         </div>
