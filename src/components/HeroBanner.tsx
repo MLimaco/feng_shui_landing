@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 const HeroBanner: React.FC = () => {
     const [mounted, setMounted] = useState(false);
-    const [clicks, setClicks] = useState(0);
 
     useEffect(() => {
         const t = setTimeout(() => setMounted(true), 50);
@@ -46,7 +45,6 @@ const HeroBanner: React.FC = () => {
 
                         <div className="mt-10 flex items-center justify-center lg:justify-start">
                             <button
-                                onClick={() => setClicks(c => c + 1)}
                                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#F3D78A] to-[#D4AF37] px-6 py-3 text-black font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200 whitespace-nowrap"
                                 aria-label="Solicita una consultoría privada"
                             >

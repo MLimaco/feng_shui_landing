@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Inquiries: React.FC = () => {
-    const [clicks, setClicks] = useState(0);
 
     return (
             <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#FFEEB3] to-[#D4AF37] py-16 md:py-20 lg:py-24">
@@ -36,7 +35,6 @@ const Inquiries: React.FC = () => {
                     {/* Button and Counter */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
                         <button
-                            onClick={() => setClicks(c => c + 1)}
                             className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#5C4033] to-[#4A2F24] px-6 py-3 text-white font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200"
                             aria-label="Solicita una consultoría privada"
                         >

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Information: React.FC = () => {
-    const [clicks, setClicks] = useState(0);
-
+    
     return (
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-black via-slate-800 to-slate-600 py-16 md:py-20 lg:py-24"
             style={{
@@ -31,7 +30,6 @@ const Information: React.FC = () => {
 
                         <div className="pt-4 flex items-center gap-4">
                             <button
-                                onClick={() => setClicks(c => c + 1)}
                                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#F3D78A] to-[#D4AF37] px-6 py-3 text-black font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200"
                                 aria-label="Solicita una consultoría privada"
                             >
