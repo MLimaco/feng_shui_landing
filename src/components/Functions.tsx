@@ -1,50 +1,21 @@
-import React, { useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import React from "react";
+import { ClockIcon, CursorArrowRippleIcon, ChartBarIcon } from "@heroicons/react/24/solid";
 
 const Functions: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const functions = [
-        {
-            id: 1,
-            number: "01",
-            title: "Análisis de entorno y timing",
-            description: "Revisión de tu hogar u oficina y de los momentos clave.",
-            bgClass: "bg-white border border-slate-300",
-            textClass: "text-black",
-            numberClass: "text-slate-400",
-        },
-        {
-            id: 2,
-            number: "02",
-            title: "Ajustes estratégicos",
-            description: "Recomendaciones claras alineadas con tu espacio, negocio y fecha de nacimiento.",
-            bgClass: "bg-gradient-to-r from-[#F3D78A] to-[#E6C67A]",
-            textClass: "text-black",
-            numberClass: "text-black",
-        },
-        {
-            id: 3,
-            number: "03",
-            title: "Integración y revisión",
-            description: "Seguimiento para afinar y estabilizar los resultados.",
-            bgClass: "bg-white border border-slate-300",
-            textClass: "text-black",
-            numberClass: "text-slate-400",
-        },
-    ];
-
-    const handlePrev = () => {
-        setCurrentIndex((prev) => (prev === 0 ? functions.length - 1 : prev - 1));
-    };
-
-    const handleNext = () => {
-        setCurrentIndex((prev) => (prev === functions.length - 1 ? 0 : prev + 1));
-    };
-
     return (
-        <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-            <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
+        <section
+            className="relative w-full bg-white py-16 md:py-20 lg:py-24"
+            style={{
+                backgroundImage: "url('/images/function/f_background.webp')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+            aria-label="Cómo funciona la consultoría"
+        >
+            {/* overlay para mejor legibilidad */}
+            <div className="absolute inset-0 bg-white/95" />
+
+            <div className="relative z-10 mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
                 <div className="w-full space-y-12 md:space-y-16">
                     {/* Title */}
                     <div className="text-center">
@@ -53,77 +24,68 @@ const Functions: React.FC = () => {
                         </h2>
                     </div>
 
-                    {/* Desktop Grid */}
-                    <div className="hidden md:grid md:grid-cols-1 gap-6 lg:gap-8">
-                        {functions.map((func) => (
-                            <div
-                                key={func.id}
-                                className={`rounded-3xl p-8 lg:p-10 flex items-center justify-between ${func.bgClass}`}
-                            >
-                                <div className="flex-1">
-                                    <h3 className={`text-2xl lg:text-3xl font-bold ${func.textClass} mb-2`}>
-                                        {func.title}
-                                    </h3>
-                                    <p className={`text-base lg:text-lg ${func.textClass} opacity-80`}>
-                                        {func.description}
-                                    </p>
+                    {/* Steps */}
+                    <div className="space-y-6 md:space-y-8">
+                        {/* Step 1 */}
+                        <div className="border border-slate-200 rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-sm hover:border-[#E6C67A]/50 transition-colors duration-300">
+                            <div className="flex items-start gap-6 md:gap-8">
+                                <div className="flex-shrink-0 flex items-start gap-2 md:gap-3">
+                                    <div className="flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#E6C67A] text-black font-bold text-xs md:text-sm flex-shrink-0">
+                                        1
+                                    </div>
+                                    <ClockIcon className="w-16 h-16 md:w-20 md:h-20 text-slate-600 flex-shrink-0" />
                                 </div>
-                                <div className={`text-5xl lg:text-6xl font-bold ${func.numberClass} ml-6 flex-shrink-0`}>
-                                    {func.number}
+                                <div className="flex-grow">
+                                    <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-black mb-2">
+                                        Análisis de entorno
+                                    </h3>
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-slate-700">
+                                        Revisión de tu hogar u oficina y de sectores clave.
+                                    </p>
+                                    <div className="mt-4 w-12 h-1 bg-[#E6C67A]" />
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
 
-                    {/* Mobile Carousel */}
-                    <div className="md:hidden">
-                        <div className={`rounded-3xl p-8 flex flex-col ${functions[currentIndex].bgClass}`}>
-                            <div className="flex items-start justify-between mb-6">
-                                <div className="flex-1">
-                                    <h3 className={`text-2xl font-bold ${functions[currentIndex].textClass} mb-2`}>
-                                        {functions[currentIndex].title}
-                                    </h3>
-                                    <p className={`text-base ${functions[currentIndex].textClass} opacity-80`}>
-                                        {functions[currentIndex].description}
-                                    </p>
+                        {/* Step 2 */}
+                        <div className="border border-slate-200 rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-sm hover:border-[#E6C67A]/50 transition-colors duration-300">
+                            <div className="flex items-start gap-6 md:gap-8">
+                                <div className="flex-shrink-0 flex items-start gap-2 md:gap-3">
+                                    <div className="flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#E6C67A] text-black font-bold text-xs md:text-sm flex-shrink-0">
+                                        2
+                                    </div>
+                                    <CursorArrowRippleIcon className="w-16 h-16 md:w-20 md:h-20 text-slate-600 flex-shrink-0" />
                                 </div>
-                                <div className={`text-5xl font-bold ${functions[currentIndex].numberClass} ml-4 flex-shrink-0`}>
-                                    {functions[currentIndex].number}
+                                <div className="flex-grow">
+                                    <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-black mb-2">
+                                        Ajustes estratégicos
+                                    </h3>
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-slate-700">
+                                        Recomendaciones claras alineadas con tu espacio, negocio y fecha de nacimiento.
+                                    </p>
+                                    <div className="mt-4 w-12 h-1 bg-[#E6C67A]" />
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Carousel Controls */}
-                            <div className="flex items-center justify-between mt-8">
-                                <button
-                                    onClick={handlePrev}
-                                    className="p-2 rounded-full bg-black/10 hover:bg-black/20 transition-colors"
-                                    aria-label="Anterior"
-                                >
-                                    <ChevronLeftIcon className={`w-6 h-6 ${functions[currentIndex].textClass}`} />
-                                </button>
-
-                                <div className="flex gap-2">
-                                    {functions.map((_, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => setCurrentIndex(index)}
-                                            className={`w-2 h-2 rounded-full transition-all ${
-                                                index === currentIndex
-                                                    ? "bg-black w-6"
-                                                    : "bg-black/30"
-                                            }`}
-                                            aria-label={`Ir a tarjeta ${index + 1}`}
-                                        />
-                                    ))}
+                        {/* Step 3 */}
+                        <div className="border border-slate-200 rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-sm hover:border-[#E6C67A]/50 transition-colors duration-300">
+                            <div className="flex items-start gap-6 md:gap-8">
+                                <div className="flex-shrink-0 flex items-start gap-2 md:gap-3">
+                                    <div className="flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#E6C67A] text-black font-bold text-xs md:text-sm flex-shrink-0">
+                                        3
+                                    </div>
+                                    <ChartBarIcon className="w-16 h-16 md:w-20 md:h-20 text-slate-600 flex-shrink-0" />
                                 </div>
-
-                                <button
-                                    onClick={handleNext}
-                                    className="p-2 rounded-full bg-black/10 hover:bg-black/20 transition-colors"
-                                    aria-label="Siguiente"
-                                >
-                                    <ChevronRightIcon className={`w-6 h-6 ${functions[currentIndex].textClass}`} />
-                                </button>
+                                <div className="flex-grow">
+                                    <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-black mb-2">
+                                        Integración y revisión
+                                    </h3>
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-slate-700">
+                                        Seguimiento para afinar y estabilizar los resultados.
+                                    </p>
+                                    <div className="mt-4 w-12 h-1 bg-[#E6C67A]" />
+                                </div>
                             </div>
                         </div>
                     </div>

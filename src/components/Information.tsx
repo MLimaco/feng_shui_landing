@@ -4,25 +4,29 @@ const Information: React.FC = () => {
     const [clicks, setClicks] = useState(0);
 
     return (
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-black via-slate-800 to-slate-600 py-16 md:py-20 lg:py-24">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-black via-slate-800 to-slate-600 py-16 md:py-20 lg:py-24"
+            style={{
+                backgroundImage: "url('/images/information/info_background.webp')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+            aria-label="Info Banner Feng Shui"
+        >
             <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
-                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 items-center">
                     {/* Left Content */}
-                    <div className="text-white space-y-6">
-                        <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-                            <span className="text-[#E6C67A] font-semibold">Hablemos claro, tus finanzas y tus negocios no van mal por falta de trabajo duro.</span>
+                    <div className="text-center lg:text-left text-white space-y-6">
+
+                        <p className="max-w-6xl text-lg md:text-2xl lg:text-3xl leading-relaxed">
+                        Esto <span className="font-bold">se llama DESALINEACIÓN.</span>
                         </p>
 
-                        <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-                            No es la estrategia comercial, tampoco es que requiera más tiempo y esfuerzo.
+                        <p className="max-w-6xl text-lg md:text-2xl lg:text-3xl leading-relaxed">
+                        Lo que significa que tu entorno no está en equilibrio para brindarte un contexto más positivo hacia tus decisiones y objetivos. Ni en la frecuencia adecuada para brindarte claridad mental, salud y riqueza.                        
                         </p>
 
-                        <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-                            <span className="text-[#E6C67A] font-semibold">Esto va más allá; se llama DESALINEACIÓN.</span> Lo cual significa que tu entorno y el momento aún no están en equilibrio para brindar un contexto más positivo hacia tus decisiones.
-                        </p>
-
-                        <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-                            Y cuando lo están, la claridad y la estabilidad regresan de forma natural.
+                        <p className="max-w-6xl text-lg md:text-2xl lg:text-3xl leading-relaxed">
+                        Sin embargo, <span className="text-[#E6C67A] font-bold">cuando tu casa y/o negocio se armonizan,</span> se estabilizan tus finanzas y tu salud se regenera de manera natural.
                         </p>
 
                         <div className="pt-4 flex items-center gap-4">
@@ -33,14 +37,6 @@ const Information: React.FC = () => {
                             >
                                 SOLICITA UNA CONSULTORÍA PRIVADA
                             </button>
-
-                            {/* click counter */}
-                            <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full text-white text-sm select-none">
-                                <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
-                                    <path d="M9 2a1 1 0 00-1 1v1H6a2 2 0 00-2 2v1h12V7a2 2 0 00-2-2h-2V3a1 1 0 00-1-1H9zM5 11v3a4 4 0 004 4h2a4 4 0 004-4v-3H5z" />
-                                </svg>
-                                <span className="font-medium">{clicks}</span>
-                            </div>
                         </div>
                     </div>
 

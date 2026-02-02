@@ -22,10 +22,10 @@ const Objectives: React.FC = () => {
                                     <LightBulbIcon className="w-8 h-8 text-black" />
                                 </div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4">
+                            <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white text-center mb-4">
                                 Claridad en las decisiones
                             </h3>
-                            <p className="text-sm md:text-base text-slate-300 text-center">
+                            <p className="text-lg md:text-2xl lg:text-3xl text-slate-300 text-center">
                                 Tu entorno favorece enfoque, perspectiva y decisiones estratégicas más claras.
                             </p>
                         </div>
@@ -37,10 +37,10 @@ const Objectives: React.FC = () => {
                                     <CurrencyDollarIcon className="w-8 h-8 text-black" />
                                 </div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4">
+                            <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white text-center mb-4">
                                 Estabilidad del negocio
                             </h3>
-                            <p className="text-sm md:text-base text-slate-300 text-center">
+                            <p className="text-lg md:text-2xl lg:text-3xl text-slate-300 text-center">
                                 Reduce fricción, inestabilidad y presión innecesaria en tu trabajo y tus finanzas.
                             </p>
                         </div>
@@ -52,10 +52,10 @@ const Objectives: React.FC = () => {
                                     <ArrowTrendingUpIcon className="w-8 h-8 text-black" />
                                 </div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4">
+                            <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white text-center mb-4">
                                 Crecimiento sostenible
                             </h3>
-                            <p className="text-sm md:text-base text-slate-300 text-center">
+                            <p className="text-lg md:text-2xl lg:text-3xl text-slate-300 text-center">
                                 Crea condiciones para resultados constantes, no solo esfuerzo continuo.
                             </p>
                         </div>
@@ -65,7 +65,7 @@ const Objectives: React.FC = () => {
                     <div className="border border-slate-700 rounded-2xl p-6 md:p-8 lg:p-10 bg-black/40 backdrop-blur-sm">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                             <div>
-                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                                     ¿Para quién es este servicio?
                                 </h3>
                             </div>
@@ -73,21 +73,21 @@ const Objectives: React.FC = () => {
                             <div className="space-y-4 md:space-y-6">
                                 <div className="flex items-start gap-4">
                                     <CheckCircleIcon className="w-6 h-6 text-[#E6C67A] flex-shrink-0 mt-1" />
-                                    <p className="text-sm md:text-base text-white">
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-white">
                                         Fundadores y dueños de negocio que toman decisiones clave
                                     </p>
                                 </div>
 
                                 <div className="flex items-start gap-4">
                                     <CheckCircleIcon className="w-6 h-6 text-[#E6C67A] flex-shrink-0 mt-1" />
-                                    <p className="text-sm md:text-base text-white">
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-white">
                                         Profesionales que sienten que su espacio ya no los sostiene
                                     </p>
                                 </div>
 
                                 <div className="flex items-start gap-4">
                                     <CheckCircleIcon className="w-6 h-6 text-[#E6C67A] flex-shrink-0 mt-1" />
-                                    <p className="text-sm md:text-base text-white">
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-white">
                                         Personas que valoran claridad, precisión y estabilidad a largo plazo
                                     </p>
                                 </div>

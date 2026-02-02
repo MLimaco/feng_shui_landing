@@ -31,39 +31,37 @@ const HeroBanner: React.FC = () => {
                 style={{ transform: "translateZ(0)" }}
             />
 
-            <div className="relative z-10 mx-auto px-6 py-20 flex items-center justify-center"
+            <div className="relative z-10 mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24"
                  style={{ maxWidth: 1200 }}>
-                <div className="w-full text-center">
-                    <h1
-                        className={`font-serif tracking-tight leading-tight text-[3.6rem] md:text-[5rem] lg:text-[7rem] xl:text-[8.5rem] text-center text-[#E6C67A] drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)] transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-                    >
-                        FENG SHUI
-                    </h1>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Left Content */}
+                    <div className="text-center lg:text-left order-2 lg:order-1">
+                        <p className={`text-slate-200 text-lg md:text-2xl lg:text-3xl px-4 sm:px-6 lg:px-0 transition-all duration-900 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
+                            Feng Shui estratégico para fundadores y dueños de negocio
+                        </p>
 
-                    <p className={`mt-6 max-w-3xl mx-auto text-white text-lg md:text-2xl lg:text-3xl leading-relaxed transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                        Feng Shui Estratégico y Astrología China para <span className="font-semibold">Fundadores y Dueños de Negocio</span>
-                    </p>
+                        <p className={`mt-6 max-w-3xl mx-auto lg:mx-0 text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+                            Impulsa tu negocio y mejora tu <span className="text-[#E6C67A] font-semibold">salud y tus finanzas</span> en menos de <span className="text-[#E6C67A] font-semibold">40 días</span>
+                        </p>
 
-                    <p className={`mt-6 max-w-2xl mx-auto text-slate-200 text-sm md:text-base lg:text-lg px-6 transition-all duration-900 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
-                        Optimiza tu entorno y el momento adecuado para tomar mejores decisiones, estabilizar tu negocio y expandir prosperidad con precisión
-                    </p>
-
-                    <div className="mt-10 flex items-center justify-center gap-4">
-                        <button
-                            onClick={() => setClicks(c => c + 1)}
-                            className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#F3D78A] to-[#D4AF37] px-6 py-3 text-black font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200"
-                            aria-label="Solicita una consultoría privada"
-                        >
-                            SOLICITA UNA CONSULTORÍA PRIVADA
-                        </button>
-
-                        {/* click counter (simple) */}
-                        <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full text-white text-sm select-none">
-                            <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
-                                <path d="M9 2a1 1 0 00-1 1v1H6a2 2 0 00-2 2v1h12V7a2 2 0 00-2-2h-2V3a1 1 0 00-1-1H9zM5 11v3a4 4 0 004 4h2a4 4 0 004-4v-3H5z" />
-                            </svg>
-                            <span className="font-medium">{clicks}</span>
+                        <div className="mt-10 flex items-center justify-center lg:justify-start">
+                            <button
+                                onClick={() => setClicks(c => c + 1)}
+                                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#F3D78A] to-[#D4AF37] px-6 py-3 text-black font-semibold shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200 whitespace-nowrap"
+                                aria-label="Solicita una consultoría privada"
+                            >
+                                SOLICITA UNA CONSULTORÍA PRIVADA
+                            </button>
                         </div>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className={`flex items-center justify-center order-1 lg:order-2 transition-all duration-700 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
+                        <img
+                            src="/images/herobanner/pic.webp"
+                            alt="Consultor Feng Shui"
+                            className="w-full max-w-sm lg:max-w-md rounded-2xl shadow-2xl"
+                        />
                     </div>
                 </div>
             </div>

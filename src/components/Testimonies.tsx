@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const Testimonies: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,24 +6,21 @@ const Testimonies: React.FC = () => {
     const testimonies = [
         {
             id: 1,
-            name: "Carlos Mendoza",
-            subtitle: "ALUMNO DE LA MENTORÍA DE DRAGON WITHIN",
-            text: "Estoy agradecido con Giancarlo, porque en el 2023, él me hizo una sesión una asesoría Feng shui con la cual descubrí de yo estaba pasando por momentos personales y financieros muy complicados mi situación cambió completamente para bien y desde ese momento las cosas me han ido de bien mejor y es por eso que yo recomiendo su asesoría. Su seguimiento recomiendo al 100% todo lo que él hace porque es un gran profesional y ayuda mucho a las personas con las cuales él trabaja a mejorar su vida",
-            videoId: "cVw84rcsNEo",
+            name: "Giancarlo Avilés",
+            image: "/images/testimonies/testimonies.webp",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper conque, euismod non, mi. Non fermentum diam nisl sit amet erat. Duis semper.",
         },
         {
             id: 2,
-            name: "María López",
-            subtitle: "EMPRENDEDORA Y FUNDADORA DE STARTUPS",
-            text: "La consultoría de Giancarlo fue transformadora para mi negocio. Los ajustes que recomendó en mi oficina generaron un cambio inmediato en la energía y productividad del equipo. Las decisiones que tomo ahora son más claras y precisas. Recomiendo ampliamente su trabajo a cualquier emprendedor que busque estabilidad y crecimiento real en sus proyectos.",
-            videoId: "MYxQoyEZD7I",
+            name: "Giancarlo Avilés",
+            image: "/images/testimonies/testimonies.webp",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper conque, euismod non, mi. Non fermentum diam nisl sit amet erat. Duis semper.",
         },
         {
             id: 3,
-            name: "José García",
-            subtitle: "DIRECTOR EJECUTIVO Y EMPRESARIO",
-            text: "Antes de trabajar con Giancarlo sentía que algo me faltaba a pesar del éxito. El análisis de feng shui y astrología que realizó cambió mi perspectiva completamente. Ahora entiendo cuál es el momento adecuado para tomar decisiones importantes. La claridad que he ganado es invaluable y ya la he compartido con mis colegas. Definitivamente ha sido la mejor inversión en mi desarrollo personal.",
-            videoId: "zmr-OeHC0DM",
+            name: "Giancarlo Avilés",
+            image: "/images/testimonies/testimonies.webp",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper conque, euismod non, mi. Non fermentum diam nisl sit amet erat. Duis semper.",
         },
     ];
 
@@ -36,76 +32,63 @@ const Testimonies: React.FC = () => {
         setCurrentIndex((prev) => (prev === testimonies.length - 1 ? 0 : prev + 1));
     };
 
-    const currentTestimony = testimonies[currentIndex];
-
     return (
-        <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
+        <section
+            className="relative w-full bg-white py-16 md:py-20 lg:py-24"
+            aria-label="Testimonios de clientes"
+        >
             <div className="mx-auto px-6 flex items-center justify-center" style={{ maxWidth: 1200 }}>
                 <div className="w-full space-y-12 md:space-y-16">
                     {/* Title */}
                     <div className="text-center">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-                            Testimonios de alumnos que lograron
+                            Clientes que lograron
                             <br />
                             <span className="text-[#D4AF37]">cambiar sus vidas conmigo</span>
                         </h2>
                     </div>
 
-                    {/* Carousel */}
-                    <div className="relative">
-                        <div className="flex items-center justify-center gap-4 md:gap-8">
-                            {/* Left Arrow */}
-                            <button
-                                onClick={handlePrev}
-                                className="p-3 rounded-full bg-[#D4AF37] hover:bg-[#C4A02F] transition-colors shadow-lg flex-shrink-0"
-                                aria-label="Testimonio anterior"
-                            >
-                                <ChevronLeftIcon className="w-6 h-6 text-black" />
-                            </button>
-
-                            {/* Content Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center flex-1">
-                                {/* Text Box */}
-                                <div className="bg-slate-100 rounded-3xl p-8 md:p-10 lg:p-12 order-2 md:order-1">
-                                    <h3 className="text-xl md:text-2xl font-bold text-black mb-2">
-                                        {currentTestimony.name}
+                    {/* Testimonies Grid - Desktop */}
+                    <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+                        {testimonies.map((testimony) => (
+                            <div key={testimony.id} className="relative">
+                                <div className="bg-slate-50 rounded-2xl p-8 pt-16 text-center flex flex-col items-center border border-slate-200 hover:border-[#D4AF37]/30 transition-colors duration-300">
+                                    <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-black mb-4">
+                                        {testimony.name}
                                     </h3>
-                                    <p className="text-xs md:text-sm font-semibold text-slate-600 mb-6 uppercase tracking-wide">
-                                        {currentTestimony.subtitle}
-                                    </p>
-                                    <p className="text-sm md:text-base lg:text-lg text-black leading-relaxed">
-                                        {currentTestimony.text}
+                                    <p className="text-lg md:text-2xl lg:text-3xl text-slate-700 leading-relaxed text-center">
+                                        {testimony.text}
                                     </p>
                                 </div>
-
-                                {/* Video Box */}
-                                <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                                    <div className="w-full max-w-xs md:max-w-sm lg:max-w-md aspect-[9/16] rounded-3xl overflow-hidden bg-slate-300 shadow-lg">
-                                        <iframe
-                                            width="100%"
-                                            height="100%"
-                                            src={`https://www.youtube.com/embed/${currentTestimony.videoId}?rel=0`}
-                                            title={`Testimonio ${currentTestimony.id}`}
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                            className="w-full h-full"
-                                        />
-                                    </div>
-                                </div>
+                                <img
+                                    src={testimony.image}
+                                    alt={testimony.name}
+                                    className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full object-cover border-4 border-white"
+                                />
                             </div>
+                        ))}
+                    </div>
 
-                            {/* Right Arrow */}
-                            <button
-                                onClick={handleNext}
-                                className="p-3 rounded-full bg-[#D4AF37] hover:bg-[#C4A02F] transition-colors shadow-lg flex-shrink-0"
-                                aria-label="Siguiente testimonio"
-                            >
-                                <ChevronRightIcon className="w-6 h-6 text-black" />
-                            </button>
+                    {/* Testimonies Carousel - Mobile & Tablet */}
+                    <div className="lg:hidden">
+                        <div className="relative">
+                            <div className="bg-slate-50 rounded-2xl p-6 md:p-8 pt-16 text-center border border-slate-200">
+                                <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-black mb-4">
+                                    {testimonies[currentIndex].name}
+                                </h3>
+                                <p className="text-lg md:text-2xl lg:text-3xl text-slate-700 leading-relaxed text-justify">
+                                    {testimonies[currentIndex].text}
+                                </p>
+                            </div>
+                            <img
+                                src={testimonies[currentIndex].image}
+                                alt={testimonies[currentIndex].name}
+                                className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-white"
+                            />
                         </div>
 
                         {/* Navigation Dots */}
-                        <div className="flex items-center justify-center gap-3 mt-12">
+                        <div className="flex items-center justify-center gap-3 mt-8">
                             {testimonies.map((_, index) => (
                                 <button
                                     key={index}
@@ -113,13 +96,13 @@ const Testimonies: React.FC = () => {
                                     className={`w-3 h-3 rounded-full transition-all ${
                                         index === currentIndex
                                             ? "bg-[#D4AF37] w-8"
-                                            : "bg-slate-300"
+                                            : "bg-slate-400 hover:bg-slate-500"
                                     }`}
                                     aria-label={`Ir a testimonio ${index + 1}`}
                                 />
                             ))}
                         </div>
-                    </div>
+                    </div>                
                 </div>
             </div>
         </section>
